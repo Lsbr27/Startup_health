@@ -3,257 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Care Guide - Guía de Cuidados</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        nav {
-            background-color: #333;
-            padding: 0.5rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1.5rem;
-            display: block;
-            transition: background-color 0.3s;
-        }
-        
-        nav a:hover {
-            background-color: #667eea;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .section {
-            background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .section h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
-        
-        .guide-card {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .card {
-            background: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 6px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .card h3 {
-            color: #764ba2;
-            margin-bottom: 0.5rem;
-        }
-        
-        .card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        .tips-list {
-            list-style-position: inside;
-            color: #555;
-        }
-        
-        .tips-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .tips-list li:last-child {
-            border-bottom: none;
-        }
-        
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #667eea;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-            margin-top: 1rem;
-        }
-        
-        .cta-button:hover {
-            background-color: #764ba2;
-        }
-    </style>
+    <title>Sophie AI | Sistema Clínico Inteligente</title>
+    <meta name="description" content="Transformando síntomas aislados en comprensión clínica profunda. Análisis inteligente de contexto, hábitos e historial.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>🏥 Care Guide</h1>
-        <p>Tu guía completa de cuidados y bienestar</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#guias">Guías</a></li>
-            <li><a href="#consejos">Consejos</a></li>
-            <li><a href="#recursos">Recursos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-    
-    <div class="container">
-        <!-- Sección de Inicio -->
-        <section class="section" id="inicio">
-            <h2>Bienvenido a Care Guide</h2>
-            <p>
-                Care Guide es tu compañero de confianza para acceder a información valiosa sobre 
-                cuidados personales, salud y bienestar. Nuestro objetivo es proporcionar guías 
-                prácticas y consejos útiles para mejorar tu calidad de vida.
-            </p>
-            <a href="#guias" class="cta-button">Explorar Guías</a>
-        </section>
-        
-        <!-- Sección de Guías -->
-        <section class="section" id="guias">
-            <h2>Nuestras Guías</h2>
-            <div class="guide-card">
-                <div class="card">
-                    <h3>💪 Salud Física</h3>
-                    <p>Aprende sobre ejercicio, nutrición y rutinas saludables para mantener tu 
-                    cuerpo en óptimas condiciones.</p>
-                </div>
-                <div class="card">
-                    <h3>🧠 Salud Mental</h3>
-                    <p>Descubre estrategias para manejar el estrés, ansiedad y promover tu 
-                    bienestar emocional.</p>
-                </div>
-                <div class="card">
-                    <h3>🛏️ Descanso</h3>
-                    <p>Mejora la calidad de tu sueño con nuestras recomendaciones y técnicas 
-                    de relajación.</p>
-                </div>
-                <div class="card">
-                    <h3>🥗 Nutrición</h3>
-                    <p>Guías sobre alimentación balanceada y planes de comidas para diferentes 
-                    objetivos.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Sección de Consejos -->
-        <section class="section" id="consejos">
-            <h2>Consejos Prácticos</h2>
-            <ul class="tips-list">
-                <li><strong>Hidratación:</strong> Bebe al menos 8 vasos de agua diariamente</li>
-                <li><strong>Movimiento:</strong> Realiza 30 minutos de actividad física al día</li>
-                <li><strong>Sueño:</strong> Mantén una rutina regular de 7-8 horas de descanso</li>
-                <li><strong>Mindfulness:</strong> Dedica 10 minutos diarios a meditar o respirar consciente</li>
-                <li><strong>Nutrición:</strong> Consume frutas, verduras y proteínas en tus comidas</li>
-                <li><strong>Conexión:</strong> Pasa tiempo de calidad con familia y amigos</li>
-            </ul>
-        </section>
-        
-        <!-- Sección de Recursos -->
-        <section class="section" id="recursos">
-            <h2>Recursos Disponibles</h2>
-            <div class="guide-card">
-                <div class="card">
-                    <h3>📱 Aplicaciones</h3>
-                    <p>Descarga nuestras apps recomendadas para seguimiento de salud.</p>
-                </div>
-                <div class="card">
-                    <h3>📚 Artículos</h3>
-                    <p>Lee artículos detallados sobre diversos temas de cuidados.</p>
-                </div>
-                <div class="card">
-                    <h3>🎥 Videos</h3>
-                    <p>Visualiza tutoriales y demostraciones prácticas.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Sección de Contacto -->
-        <section class="section" id="contacto">
-            <h2>¿Tienes Preguntas?</h2>
-            <p>Estamos aquí para ayudarte. Contacta con nuestro equipo:</p>
-            <ul class="tips-list">
-                <li>Email: info@careguide.com</li>
-                <li>Teléfono: +1 (555) 123-4567</li>
-                <li>Redes Sociales: @careguide</li>
-            </ul>
-            <a href="mailto:info@careguide.com" class="cta-button">Enviar Mensaje</a>
-        </section>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
     </div>
-    
-    <footer>
-        <p>&copy; 2026 Care Guide. Todos los derechos reservados.</p>
-        <p>Tu bienestar es nuestra prioridad.</p>
+
+    <header>
+        <div class="container nav">
+            <div class="logo">
+                <i data-lucide="activity"></i>
+                Sophie<span>AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#proposito">Propósito</a>
+                <a href="#tecnologia">Tecnología</a>
+                <a href="#modelo">Modelo Híbrido</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <a href="#" class="btn btn-outline" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Acceso Beta</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="concept-tag">Nueva Era de Comprensión Clínica</div>
+            <h1>Comprensión Clínica <br><span class="gradient-text">Más Allá del Síntoma</span></h1>
+            <p>Sophie no es una app de bienestar tradicional. Es un sistema inteligente que conecta tu estilo de vida, historial y datos dispersos para entender la causa raíz de tu salud.</p>
+            <div class="cta-group">
+                <a href="#proposito" class="btn btn-primary">Descubrir Sophie</a>
+                <a href="#modelo" class="btn btn-outline">Ver Modelo Híbrido</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="tecnologia" class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.5rem;">Inteligencia que Contextualiza</h2>
+                <p style="color: var(--text-dim);">Transformamos datos aislados en conocimiento accionable.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="brain"></i></div>
+                    <h3>Análisis de Contexto</h3>
+                    <p>Evaluamos síntomas considerando tu entorno, estrés y factores ambientales para una visión 360°.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="gauge"></i></div>
+                    <h3>Patrones Personales</h3>
+                    <p>Detectamos tendencias únicas en tu salud que los sistemas tradicionales suelen pasar por alto.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="database"></i></div>
+                    <h3>Relación de Hábitos</h3>
+                    <p>Conectamos tu estilo de vida con tus métricas clínicas para entender el "por qué" de cada dato.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hybrid Model Section -->
+        <section id="modelo" class="container">
+            <div class="concept">
+                <div class="concept-image" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(45deg, #0a0e17, #1a2333);">
+                    <div style="text-align: center; padding: 2rem;">
+                        <i data-lucide="split" style="width: 80px; height: 80px; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="color: white; margin-bottom: 0.5rem;">Evaluación Estructurada</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-dim);">Algoritmos clínicos de alta precisión</p>
+                    </div>
+                </div>
+                <div class="concept-content">
+                    <div class="concept-tag">Ecosistema Híbrido</div>
+                    <h2>La IA como Puente, <br><span class="gradient-text">No como Reemplazo</span></h2>
+                    <p>Sophie realiza una evaluación inicial profunda. Si el sistema detecta que el caso es manejable digitalmente, te guía en el proceso. Si detecta riesgos o necesidad de criterio humano, te conecta instantáneamente con un profesional.</p>
+                    <ul style="list-style: none; margin-top: 1.5rem;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i data-lucide="check-circle" style="color: var(--primary); width: 18px;"></i>
+                            Triaje inteligente 24/7
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i data-lucide="check-circle" style="color: var(--primary); width: 18px;"></i>
+                            Reducción de incertidumbre clínica
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i data-lucide="check-circle" style="color: var(--primary); width: 18px;"></i>
+                            Conexión humana cuando importa
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="container" style="text-align: center;">
+            <div style="background: var(--glass); border: 1px solid var(--glass-border); padding: 4rem; border-radius: 40px;">
+                <h2 style="font-size: 3rem; margin-bottom: 1rem;">Sé parte del Futuro</h2>
+                <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto 2rem;">Estamos construyendo el sistema clínico más avanzado del mundo. Únete a la lista de espera para el acceso beta.</p>
+                <div style="display: flex; max-width: 400px; margin: 0 auto; gap: 0.5rem;">
+                    <input type="email" placeholder="tu@email.com" style="flex: 1; padding: 1rem 1.5rem; border-radius: 50px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.05); color: white; outline: none;">
+                    <button class="btn btn-primary" style="padding: 1rem 2rem;">Unirse</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <div class="logo" style="justify-content: center; margin-bottom: 1rem;">
+            <i data-lucide="activity"></i>
+            Sophie<span>AI</span>
+        </div>
+        <p>&copy; 2026 Startup Health. Transformando la comprensión clínica.</p>
+        <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem;">
+            <a href="#" style="color: var(--text-dim); text-decoration: none;">Twitter</a>
+            <a href="#" style="color: var(--text-dim); text-decoration: none;">LinkedIn</a>
+            <a href="#" style="color: var(--text-dim); text-decoration: none;">Privacidad</a>
+        </div>
     </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Simple scroll animation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

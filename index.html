@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Guide - Guía de Cuidados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #667eea;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .guide-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .card {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #764ba2;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .tips-list {
+            list-style-position: inside;
+            color: #555;
+        }
+        
+        .tips-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .tips-list li:last-child {
+            border-bottom: none;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .cta-button:hover {
+            background-color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏥 Care Guide</h1>
+        <p>Tu guía completa de cuidados y bienestar</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#guias">Guías</a></li>
+            <li><a href="#consejos">Consejos</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <!-- Sección de Inicio -->
+        <section class="section" id="inicio">
+            <h2>Bienvenido a Care Guide</h2>
+            <p>
+                Care Guide es tu compañero de confianza para acceder a información valiosa sobre 
+                cuidados personales, salud y bienestar. Nuestro objetivo es proporcionar guías 
+                prácticas y consejos útiles para mejorar tu calidad de vida.
+            </p>
+            <a href="#guias" class="cta-button">Explorar Guías</a>
+        </section>
+        
+        <!-- Sección de Guías -->
+        <section class="section" id="guias">
+            <h2>Nuestras Guías</h2>
+            <div class="guide-card">
+                <div class="card">
+                    <h3>💪 Salud Física</h3>
+                    <p>Aprende sobre ejercicio, nutrición y rutinas saludables para mantener tu 
+                    cuerpo en óptimas condiciones.</p>
+                </div>
+                <div class="card">
+                    <h3>🧠 Salud Mental</h3>
+                    <p>Descubre estrategias para manejar el estrés, ansiedad y promover tu 
+                    bienestar emocional.</p>
+                </div>
+                <div class="card">
+                    <h3>🛏️ Descanso</h3>
+                    <p>Mejora la calidad de tu sueño con nuestras recomendaciones y técnicas 
+                    de relajación.</p>
+                </div>
+                <div class="card">
+                    <h3>🥗 Nutrición</h3>
+                    <p>Guías sobre alimentación balanceada y planes de comidas para diferentes 
+                    objetivos.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Consejos -->
+        <section class="section" id="consejos">
+            <h2>Consejos Prácticos</h2>
+            <ul class="tips-list">
+                <li><strong>Hidratación:</strong> Bebe al menos 8 vasos de agua diariamente</li>
+                <li><strong>Movimiento:</strong> Realiza 30 minutos de actividad física al día</li>
+                <li><strong>Sueño:</strong> Mantén una rutina regular de 7-8 horas de descanso</li>
+                <li><strong>Mindfulness:</strong> Dedica 10 minutos diarios a meditar o respirar consciente</li>
+                <li><strong>Nutrición:</strong> Consume frutas, verduras y proteínas en tus comidas</li>
+                <li><strong>Conexión:</strong> Pasa tiempo de calidad con familia y amigos</li>
+            </ul>
+        </section>
+        
+        <!-- Sección de Recursos -->
+        <section class="section" id="recursos">
+            <h2>Recursos Disponibles</h2>
+            <div class="guide-card">
+                <div class="card">
+                    <h3>📱 Aplicaciones</h3>
+                    <p>Descarga nuestras apps recomendadas para seguimiento de salud.</p>
+                </div>
+                <div class="card">
+                    <h3>📚 Artículos</h3>
+                    <p>Lee artículos detallados sobre diversos temas de cuidados.</p>
+                </div>
+                <div class="card">
+                    <h3>🎥 Videos</h3>
+                    <p>Visualiza tutoriales y demostraciones prácticas.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Contacto -->
+        <section class="section" id="contacto">
+            <h2>¿Tienes Preguntas?</h2>
+            <p>Estamos aquí para ayudarte. Contacta con nuestro equipo:</p>
+            <ul class="tips-list">
+                <li>Email: info@careguide.com</li>
+                <li>Teléfono: +1 (555) 123-4567</li>
+                <li>Redes Sociales: @careguide</li>
+            </ul>
+            <a href="mailto:info@careguide.com" class="cta-button">Enviar Mensaje</a>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Care Guide. Todos los derechos reservados.</p>
+        <p>Tu bienestar es nuestra prioridad.</p>
+    </footer>
+</body>
+</html>

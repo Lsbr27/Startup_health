@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -21,6 +21,7 @@
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
 
     <header>
@@ -31,122 +32,585 @@
             </div>
             <div class="nav-links">
                 <a href="#proposito">Propósito</a>
-                <a href="#tecnologia">Tecnología</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#consulta-virtual">Consulta virtual</a>
                 <a href="#modelo">Modelo Híbrido</a>
+                <a href="#especialistas">Especialistas</a>
                 <a href="#contacto">Contacto</a>
             </div>
-            <a href="#" class="btn btn-outline" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Acceso Beta</a>
+            <a href="#contacto" class="btn btn-outline btn-sm">Lista de espera</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero container">
-            <div class="concept-tag">Nueva Era de Comprensión Clínica</div>
-            <h1>Comprensión Clínica <br><span class="gradient-text">Más Allá del Síntoma</span></h1>
-            <p>Sophie no es una app de bienestar tradicional. Es un sistema inteligente que conecta tu estilo de vida, historial y datos dispersos para entender la causa raíz de tu salud.</p>
-            <div class="cta-group">
-                <a href="#proposito" class="btn btn-primary">Descubrir Sophie</a>
-                <a href="#modelo" class="btn btn-outline">Ver Modelo Híbrido</a>
+        <section id="proposito" class="hero container">
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <div class="concept-tag">Prototipo para Pacientes</div>
+                    <h1>Comprensión Clínica <br><span class="gradient-text">Más Allá del Síntoma</span></h1>
+                    <p>Sophie es un sistema clínico inteligente que transforma síntomas aislados y datos dispersos en comprensión clínica. Integra síntomas, hábitos, estrés, sueño e historial para ayudarte a entender mejor qué podría estar pasando y qué decisión tomar.</p>
+                    <div class="cta-group">
+                        <a href="#contacto" class="btn btn-primary">Unirme a la lista de espera</a>
+                        <a href="#como-funciona" class="btn btn-outline">Conocer cómo funciona</a>
+                    </div>
+                    <p class="hero-meta">Idea / prototipo en desarrollo. Diseñado para orientar decisiones en casos no urgentes pero importantes.</p>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-grid"></div>
+                    <div class="hero-orbit hero-orbit-1"></div>
+                    <div class="hero-orbit hero-orbit-2"></div>
+                    <div class="hero-glow hero-glow-blue"></div>
+                    <div class="hero-glow hero-glow-red"></div>
+                    <div class="hero-bokeh hero-bokeh-1"></div>
+                    <div class="hero-bokeh hero-bokeh-2"></div>
+                    <div class="hero-bokeh hero-bokeh-3"></div>
+
+                    <div class="doctor-scene">
+                        <div class="doctor-silhouette">
+                            <div class="doctor-head"></div>
+                            <div class="doctor-torso"></div>
+                            <div class="doctor-coat"></div>
+                            <div class="doctor-arm"></div>
+                            <div class="doctor-hand">
+                                <span class="doctor-finger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-chip chip-heart">
+                        <i data-lucide="heart-pulse"></i>
+                        <span>Riesgo cardiovascular</span>
+                    </div>
+                    <div class="hero-chip chip-lung">
+                        <i data-lucide="activity"></i>
+                        <span>Patrón respiratorio</span>
+                    </div>
+
+                    <div class="hero-anatomy hero-holo-stage">
+                        <div class="hero-holo-panels">
+                            <div class="holo-panel holo-panel-top">
+                                <div class="mini-grid"></div>
+                                <div class="mini-bars">
+                                    <span style="height: 32%"></span>
+                                    <span style="height: 58%"></span>
+                                    <span style="height: 44%"></span>
+                                    <span style="height: 72%"></span>
+                                    <span style="height: 52%"></span>
+                                </div>
+                            </div>
+                            <div class="holo-panel holo-panel-right">
+                                <div class="mini-lines"></div>
+                                <div class="mini-lines faint"></div>
+                            </div>
+                            <div class="holo-panel holo-panel-left">
+                                <div class="mini-grid"></div>
+                                <div class="mini-wave"></div>
+                            </div>
+                        </div>
+
+                        <div class="hero-touch-point">
+                            <span class="touch-ring ring-1"></span>
+                            <span class="touch-ring ring-2"></span>
+                            <span class="touch-core"></span>
+                        </div>
+
+                        <svg class="hero-svg-heart" viewBox="0 0 340 320" role="img" aria-label="Corazón holográfico anatómico">
+                            <defs>
+                                <linearGradient id="holoHeartFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+                                    <stop offset="38%" stop-color="#6FA8DC" stop-opacity="0.8" />
+                                    <stop offset="72%" stop-color="#F28B82" stop-opacity="0.78" />
+                                    <stop offset="100%" stop-color="#E7434C" stop-opacity="0.72" />
+                                </linearGradient>
+                                <radialGradient id="holoCore" cx="50%" cy="48%" r="50%">
+                                    <stop offset="0%" stop-color="#ffd27a" stop-opacity="1" />
+                                    <stop offset="35%" stop-color="#ff9f43" stop-opacity="0.9" />
+                                    <stop offset="100%" stop-color="#ff9f43" stop-opacity="0" />
+                                </radialGradient>
+                                <filter id="holoGlow" x="-60%" y="-60%" width="220%" height="220%">
+                                    <feGaussianBlur stdDeviation="8" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <ellipse cx="170" cy="170" rx="74" ry="92" fill="url(#holoHeartFill)" opacity="0.2" filter="url(#holoGlow)"/>
+                            <circle cx="170" cy="152" r="52" fill="url(#holoCore)" class="hero-heart-core"/>
+
+                            <path d="M175 76c22-21 46-18 59 1 16 22 8 49-8 67-10 12-24 22-42 37-16 13-22 33-19 59-17-20-34-31-44-41-21-19-35-44-24-71 10-24 40-35 64-18 4-12 8-24 14-34z"
+                                  fill="url(#holoHeartFill)" stroke="#d9f1ff" stroke-opacity="0.88" stroke-width="3" filter="url(#holoGlow)"/>
+                            <path d="M173 86c-11 14-15 31-14 44m27-36c15-11 29-12 40-4m-116 78c18 10 29 26 32 49m111-37c-17 9-29 26-34 50m-52-82c-4 22-3 48 2 75"
+                                  fill="none" stroke="#bff8ff" stroke-opacity="0.8" stroke-width="2"/>
+
+                            <path d="M116 114l108 109M103 151l133 73M137 95l70 143M170 82l1 155M202 97l-62 141M230 126l-118 104"
+                                  fill="none" stroke="#8de8ff" stroke-opacity="0.45" stroke-width="1.1" class="hero-wireframe"/>
+
+                            <path d="M50 244h50l11-15 10 27 16-43 14 28 18-8 18 15h18" stroke="#54f2ff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" class="hero-ecg-line"/>
+                            <path d="M58 263h42l8-9 10 16 13-22 9 14 20-4 13 8h22" stroke="#54f2ff" stroke-opacity="0.45" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="hero-ecg-line hero-ecg-line-secondary"/>
+                        </svg>
+                    </div>
+
+                    <div class="hero-stat stat-1">
+                        <span class="hero-stat-label">Contexto</span>
+                        <strong>+ hábitos + historial</strong>
+                    </div>
+                    <div class="hero-stat stat-2">
+                        <span class="hero-stat-label">Análisis</span>
+                        <strong>Respiratorio + cardio</strong>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Features Section -->
+        <!-- Benefits Section -->
         <section id="tecnologia" class="container">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 style="font-size: 2.5rem;">Inteligencia que Contextualiza</h2>
-                <p style="color: var(--text-dim);">Transformamos datos aislados en conocimiento accionable.</p>
+            <div class="section-intro">
+                <h2 class="section-title">Qué entiende de tu contexto</h2>
+                <p class="section-subtitle">No solo preguntamos “qué sientes”. Buscamos una comprensión más completa de tu situación.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="brain"></i></div>
-                    <h3>Análisis de Contexto</h3>
-                    <p>Evaluamos síntomas considerando tu entorno, estrés y factores ambientales para una visión 360°.</p>
+                    <h3>Entender posibles causas</h3>
+                    <p>Analizamos síntomas dentro de tu contexto para generar explicaciones más útiles que una búsqueda general.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="gauge"></i></div>
-                    <h3>Patrones Personales</h3>
-                    <p>Detectamos tendencias únicas en tu salud que los sistemas tradicionales suelen pasar por alto.</p>
+                    <h3>Detectar patrones personales</h3>
+                    <p>Identificamos tendencias repetidas en tus síntomas y hábitos que pueden pasar desapercibidas en consultas breves.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="database"></i></div>
-                    <h3>Relación de Hábitos</h3>
-                    <p>Conectamos tu estilo de vida con tus métricas clínicas para entender el "por qué" de cada dato.</p>
+                    <h3>Relacionar hábitos y datos</h3>
+                    <p>Conectamos sueño, estrés y rutina con tu evolución para entender mejor el “por qué” detrás de cada cambio.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="file-heart"></i></div>
+                    <h3>Analizar historial clínico</h3>
+                    <p>Tomamos en cuenta antecedentes y contexto previo para que la evaluación no empiece desde cero cada vez.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Positioning Section -->
+        <section id="posicionamiento" class="container">
+            <div class="section-intro">
+                <h2 class="section-title">Qué es y qué no es</h2>
+                <p class="section-subtitle">Una forma más clara de entender tu salud, sin prometer reemplazar la atención médica.</p>
+            </div>
+            <div class="duo-grid">
+                <div class="panel-card panel-card-muted">
+                    <h3>No es</h3>
+                    <ul class="plain-list">
+                        <li>Una app de wellness tradicional</li>
+                        <li>Un sistema médico reactivo que solo clasifica urgencia</li>
+                        <li>Un reemplazo de atención médica presencial</li>
+                    </ul>
+                </div>
+                <div class="panel-card panel-card-highlight">
+                    <h3>Sí es</h3>
+                    <ul class="plain-list">
+                        <li>Un sistema híbrido que conecta estilo de vida y análisis clínico</li>
+                        <li>Una evaluación inicial estructurada y contextual</li>
+                        <li>Una guía para ayudarte a decidir qué hacer después</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works -->
+        <section id="como-funciona" class="container">
+            <div class="section-intro">
+                <h2 class="section-title">Cómo funciona</h2>
+                <p class="section-subtitle">Combinamos evaluación estructurada, contexto personal y decisión guiada.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Evaluación inicial</h3>
+                    <p>La IA realiza preguntas estructuradas sobre síntomas, evolución, señales de alerta y contexto general.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Análisis contextual</h3>
+                    <p>Integra historial, hábitos y datos como sueño o estrés para detectar patrones y posibles causas.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Guía y derivación</h3>
+                    <p>Te orienta con próximos pasos y, si el caso lo requiere, sugiere intervención de un profesional.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Consultation Demo -->
+        <section id="consulta-virtual" class="container">
+            <div class="section-intro">
+                <h2 class="section-title">Consulta virtual guiada por IA</h2>
+                <p class="section-subtitle">Una experiencia tipo chat donde la IA hace preguntas clínicas estructuradas para entender síntomas, contexto y evolución.</p>
+            </div>
+
+            <div class="consult-grid">
+                <div class="consult-chat panel-card panel-card-highlight">
+                    <div class="consult-chat-header">
+                        <div class="consult-status">
+                            <span class="consult-dot"></span>
+                            <div>
+                                <strong>Sophie Consulta</strong>
+                                <p>Modo evaluación inicial</p>
+                            </div>
+                        </div>
+                        <span class="consult-badge">Demo interactiva</span>
+                    </div>
+
+                    <div id="consultMessages" class="consult-messages" aria-live="polite"></div>
+
+                    <div class="consult-quick">
+                        <p class="consult-quick-label">Respuestas sugeridas</p>
+                        <div id="consultOptions" class="consult-options"></div>
+                    </div>
+
+                    <form id="consultForm" class="consult-input-row" onsubmit="event.preventDefault();">
+                        <input id="consultInput" class="consult-input" type="text" placeholder="Escribe tu respuesta..." aria-label="Respuesta del usuario">
+                        <button id="consultSend" class="btn btn-primary consult-send" type="submit">Enviar</button>
+                    </form>
+                </div>
+
+                <div class="consult-side">
+                    <div class="panel-card">
+                        <h3>Qué evalúa la IA en este chat</h3>
+                        <ul class="plain-list">
+                            <li>Inicio y evolución de los síntomas</li>
+                            <li>Señales de alarma y nivel de urgencia</li>
+                            <li>Contexto: sueño, estrés, hábitos, antecedentes</li>
+                            <li>Factores que empeoran o alivian</li>
+                            <li>Necesidad de seguimiento o escalamiento clínico</li>
+                        </ul>
+                    </div>
+                    <div class="panel-card panel-card-muted consult-note-card">
+                        <h3>Importante</h3>
+                        <p class="panel-copy">Esta sección es una simulación visual de la experiencia. El objetivo es mostrar cómo se vería una consulta conversacional guiada y estructurada dentro del producto.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Hybrid Model Section -->
         <section id="modelo" class="container">
-            <div class="concept">
-                <div class="concept-image" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(45deg, #0a0e17, #1a2333);">
-                    <div style="text-align: center; padding: 2rem;">
-                        <i data-lucide="split" style="width: 80px; height: 80px; color: var(--primary); margin-bottom: 1rem;"></i>
-                        <h4 style="color: white; margin-bottom: 0.5rem;">Evaluación Estructurada</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-dim);">Algoritmos clínicos de alta precisión</p>
-                    </div>
+            <div class="section-intro">
+                <h2 class="section-title">Modelo de atención híbrido</h2>
+                <p class="section-subtitle">La plataforma combina evaluación inicial asistida por IA con escalamiento clínico a profesionales de salud cuando el caso lo requiere.</p>
+            </div>
+            <div class="duo-grid">
+                <div class="panel-card panel-card-highlight">
+                    <h3>Rol de la IA</h3>
+                    <ul class="plain-list">
+                        <li>Recopila síntomas, evolución y contexto del paciente</li>
+                        <li>Integra historial clínico, hábitos y datos relevantes</li>
+                        <li>Detecta patrones y posibles explicaciones en contexto</li>
+                        <li>Estructura el caso y orienta próximos pasos</li>
+                        <li>Identifica criterios de escalamiento clínico</li>
+                    </ul>
                 </div>
-                <div class="concept-content">
-                    <div class="concept-tag">Ecosistema Híbrido</div>
-                    <h2>La IA como Puente, <br><span class="gradient-text">No como Reemplazo</span></h2>
-                    <p>Sophie realiza una evaluación inicial profunda. Si el sistema detecta que el caso es manejable digitalmente, te guía en el proceso. Si detecta riesgos o necesidad de criterio humano, te conecta instantáneamente con un profesional.</p>
-                    <ul style="list-style: none; margin-top: 1.5rem;">
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i data-lucide="check-circle" style="color: var(--primary); width: 18px;"></i>
-                            Triaje inteligente 24/7
-                        </li>
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i data-lucide="check-circle" style="color: var(--primary); width: 18px;"></i>
-                            Reducción de incertidumbre clínica
-                        </li>
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i data-lucide="check-circle" style="color: var(--primary); width: 18px;"></i>
-                            Conexión humana cuando importa
-                        </li>
+                <div class="panel-card">
+                    <h3>Rol del profesional de salud</h3>
+                    <ul class="plain-list">
+                        <li>Evalúa casos complejos, persistentes o con riesgo clínico</li>
+                        <li>Aporta criterio clínico y juicio profesional</li>
+                        <li>Define conducta, seguimiento o atención presencial</li>
+                        <li>Interpreta hallazgos cuando se requiere supervisión humana</li>
+                        <li>Resuelve situaciones fuera del alcance digital</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="model-summary">
+                <div class="concept-tag">Principio Operativo</div>
+                <p>La IA acelera y contextualiza. El profesional decide e interviene cuando importa.</p>
+            </div>
+        </section>
+
+        <!-- Specialists Network -->
+        <section id="especialistas" class="container">
+            <div class="section-intro">
+                <h2 class="section-title">Escalamiento clínico y red profesional</h2>
+                <p class="section-subtitle">Cuando la evaluación inicial identifica riesgo, complejidad o necesidad de intervención, se activa una ruta de derivación a profesionales de salud.</p>
+            </div>
+            <div class="panel-card long-card specialists-intro">
+                <p>El sistema está diseñado para trabajar con una red de especialistas asociados, de modo que los casos que no deben manejarse solo de forma digital reciban atención humana. La información estructurada en la evaluación inicial ayuda a acelerar la revisión clínica y mejorar la continuidad del proceso.</p>
+            </div>
+
+            <div class="specialists-grid">
+                <article class="specialist-card">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Especialista en medicina general" class="specialist-photo">
+                    <div class="specialist-body">
+                        <h3>Dra. Laura Martínez</h3>
+                        <p class="specialist-role">Medicina General</p>
+                        <p>Primera valoración clínica y seguimiento de síntomas frecuentes o inespecíficos.</p>
+                    </div>
+                </article>
+                <article class="specialist-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Especialista en medicina interna" class="specialist-photo">
+                    <div class="specialist-body">
+                        <h3>Dr. Daniel Rojas</h3>
+                        <p class="specialist-role">Medicina Interna</p>
+                        <p>Apoyo en casos con mayor complejidad clínica o necesidad de evaluación más profunda.</p>
+                    </div>
+                </article>
+                <article class="specialist-card">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Especialista en salud mental" class="specialist-photo">
+                    <div class="specialist-body">
+                        <h3>Dra. Sofía Herrera</h3>
+                        <p class="specialist-role">Psicología / Salud Mental</p>
+                        <p>Intervención en casos donde estrés, ansiedad o estado emocional influyen en el cuadro.</p>
+                    </div>
+                </article>
+                <article class="specialist-card">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Especialista en nutrición" class="specialist-photo">
+                    <div class="specialist-body">
+                        <h3>Lic. Andrés Vega</h3>
+                        <p class="specialist-role">Nutrición Clínica</p>
+                        <p>Apoyo en hábitos, alimentación y relación con síntomas persistentes o metabólicos.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="duo-grid specialist-bottom">
+                <div class="panel-card">
+                    <h3>Criterios de escalamiento</h3>
+                    <ul class="plain-list">
+                        <li>Presencia de señales de alarma</li>
+                        <li>Síntomas persistentes o en empeoramiento</li>
+                        <li>Alta incertidumbre clínica</li>
+                        <li>Necesidad de evaluación física o pruebas complementarias</li>
+                        <li>Casos fuera del alcance de orientación digital</li>
+                    </ul>
+                </div>
+                <div class="panel-card panel-card-muted">
+                    <h3>Objetivo del escalamiento</h3>
+                    <p class="panel-copy">No todos los casos requieren intervención inmediata, pero los que sí la necesitan deben identificarse a tiempo y canalizarse correctamente. La plataforma prioriza orientación, continuidad y decisión informada.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Triage Comparison -->
+        <section id="diferencia" class="container">
+            <div class="section-intro">
+                <h2 class="section-title">Más allá del triage tradicional</h2>
+                <p class="section-subtitle">El triage clasifica la urgencia. Sophie busca entender el problema dentro de tu contexto.</p>
+            </div>
+            <div class="duo-grid">
+                <div class="panel-card">
+                    <h3>Triage tradicional</h3>
+                    <ul class="plain-list">
+                        <li>Clasifica nivel de urgencia</li>
+                        <li>Identifica señales de alarma</li>
+                        <li>Ayuda a decidir si ir a urgencias o esperar</li>
+                        <li>No profundiza necesariamente en causas</li>
+                    </ul>
+                </div>
+                <div class="panel-card panel-card-highlight">
+                    <h3>Sophie AI</h3>
+                    <ul class="plain-list">
+                        <li>Evalúa urgencia y contexto completo</li>
+                        <li>Integra historial, hábitos y datos personales</li>
+                        <li>Detecta patrones y posibles causas</li>
+                        <li>Te guía en la decisión siguiente</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="container" style="text-align: center;">
-            <div style="background: var(--glass); border: 1px solid var(--glass-border); padding: 4rem; border-radius: 40px;">
-                <h2 style="font-size: 3rem; margin-bottom: 1rem;">Sé parte del Futuro</h2>
-                <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto 2rem;">Estamos construyendo el sistema clínico más avanzado del mundo. Únete a la lista de espera para el acceso beta.</p>
-                <div style="display: flex; max-width: 400px; margin: 0 auto; gap: 0.5rem;">
-                    <input type="email" placeholder="tu@email.com" style="flex: 1; padding: 1rem 1.5rem; border-radius: 50px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.05); color: white; outline: none;">
-                    <button class="btn btn-primary" style="padding: 1rem 2rem;">Unirse</button>
+        <!-- Clinical Basis -->
+        <section id="base-clinica" class="container">
+            <div class="section-intro">
+                <h2 class="section-title">Base clínica y personalización</h2>
+                <p class="section-subtitle">Construido sobre protocolos clínicos y adaptado dinámicamente al contexto del paciente.</p>
+            </div>
+            <div class="panel-card long-card">
+                <p>Nos basamos en protocolos clínicos existentes desarrollados por médicos y los combinamos con algoritmos que permiten aplicarlos de forma dinámica y personalizada según cada paciente. El objetivo no es entregar información genérica, sino ofrecer una orientación más útil, contextual y accionable.</p>
+            </div>
+        </section>
+
+        <!-- Safety Notice -->
+        <section id="aviso" class="container">
+            <div class="notice-card">
+                <div class="notice-icon"><i data-lucide="shield-alert"></i></div>
+                <div>
+                    <h3>Aviso importante</h3>
+                    <p>Sophie AI es una herramienta de orientación y comprensión clínica en desarrollo. No sustituye diagnóstico médico, tratamiento profesional ni atención de urgencias. Ante signos de alarma o una emergencia, busca atención médica inmediata.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contacto" class="container cta-section">
+            <div class="cta-panel">
+                <h2 class="cta-title">Participa en las primeras pruebas</h2>
+                <p class="cta-copy">Estamos desarrollando un prototipo para ayudar a pacientes a entender mejor sus síntomas en contexto. Puedes unirte a la lista de espera o solicitar una demo para conocer el enfoque.</p>
+                <form class="cta-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="tu@email.com" class="cta-input" aria-label="Correo electrónico">
+                    <button class="btn btn-primary cta-button" type="submit">Lista de espera</button>
+                </form>
+                <div class="cta-actions">
+                    <a href="#como-funciona" class="btn btn-outline">Conocer cómo funciona</a>
+                    <a href="mailto:hola@sophieai.health?subject=Quiero%20una%20demo" class="btn btn-outline">Quiero una demo</a>
+                </div>
+                <p class="cta-note">Registro y demos en validación. Si aún no tienes correo del proyecto, luego cambiamos este enlace por tu contacto real.</p>
             </div>
         </section>
     </main>
 
     <footer class="container">
-        <div class="logo" style="justify-content: center; margin-bottom: 1rem;">
+        <div class="logo logo-center">
             <i data-lucide="activity"></i>
             Sophie<span>AI</span>
         </div>
         <p>&copy; 2026 Startup Health. Transformando la comprensión clínica.</p>
-        <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem;">
-            <a href="#" style="color: var(--text-dim); text-decoration: none;">Twitter</a>
-            <a href="#" style="color: var(--text-dim); text-decoration: none;">LinkedIn</a>
-            <a href="#" style="color: var(--text-dim); text-decoration: none;">Privacidad</a>
-        </div>
+        <p class="footer-note">Redes y política de privacidad: próximamente.</p>
     </footer>
 
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
 
-        // Simple scroll animation
+        // Smooth scroll for valid internal anchors only
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const targetSelector = this.getAttribute('href');
+                if (!targetSelector || targetSelector === '#') return;
+
+                const target = document.querySelector(targetSelector);
+                if (!target) return;
+
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Virtual consultation chat demo
+        (function initConsultChat() {
+            const messagesEl = document.getElementById('consultMessages');
+            const optionsEl = document.getElementById('consultOptions');
+            const inputEl = document.getElementById('consultInput');
+            const formEl = document.getElementById('consultForm');
+            const sendBtn = document.getElementById('consultSend');
+
+            if (!messagesEl || !optionsEl || !inputEl || !formEl || !sendBtn) return;
+
+            const flow = [
+                {
+                    question: 'Hola, soy Sophie. Para orientarte mejor: ¿qué síntoma te preocupa más hoy?',
+                    options: ['Dolor en el pecho', 'Falta de aire', 'Mareo', 'Cansancio']
+                },
+                {
+                    question: '¿Hace cuánto empezó y cómo ha evolucionado?',
+                    options: ['Hoy, de repente', 'Desde hace 2-3 días', 'Hace semanas', 'Va empeorando']
+                },
+                {
+                    question: '¿Tienes alguna señal de alarma en este momento? (dolor intenso, desmayo, dificultad fuerte para respirar)',
+                    options: ['No', 'Leve', 'Sí, me preocupa']
+                },
+                {
+                    question: 'Para contextualizar: ¿cómo han estado tu sueño y estrés esta semana?',
+                    options: ['Dormí mal + estrés alto', 'Dormí bien', 'Estrés moderado', 'No estoy seguro/a']
+                },
+                {
+                    question: 'Gracias. Con estas respuestas, la IA puede estructurar el caso y sugerir siguientes pasos o escalamiento. ¿Quieres reiniciar la demo?',
+                    options: ['Reiniciar demo']
+                }
+            ];
+
+            let step = 0;
+            let waiting = false;
+
+            function scrollToBottom() {
+                messagesEl.scrollTop = messagesEl.scrollHeight;
+            }
+
+            function addMessage(text, role) {
+                const row = document.createElement('div');
+                row.className = `consult-message consult-${role}`;
+
+                const bubble = document.createElement('div');
+                bubble.className = 'consult-bubble';
+                bubble.textContent = text;
+
+                row.appendChild(bubble);
+                messagesEl.appendChild(row);
+                scrollToBottom();
+            }
+
+            function renderOptions(list) {
+                optionsEl.innerHTML = '';
+                list.forEach(option => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'consult-option';
+                    btn.textContent = option;
+                    btn.addEventListener('click', () => handleUserReply(option));
+                    optionsEl.appendChild(btn);
+                });
+            }
+
+            function askCurrentStep() {
+                waiting = true;
+                const current = flow[step];
+                addMessage(current.question, 'ai');
+                renderOptions(current.options);
+                inputEl.placeholder = step === flow.length - 1 ? 'Escribe "reiniciar" o usa el botón...' : 'Escribe tu respuesta...';
+                sendBtn.disabled = false;
+                waiting = false;
+            }
+
+            function handleUserReply(rawValue) {
+                if (waiting) return;
+                const value = (rawValue || '').trim();
+                if (!value) return;
+
+                const isFinalStep = step === flow.length - 1;
+                const wantsRestart = value.toLowerCase() === 'reiniciar' || value.toLowerCase() === 'reiniciar demo';
+
+                addMessage(value, 'user');
+
+                if (isFinalStep && wantsRestart) {
+                    step = 0;
+                    messagesEl.innerHTML = '';
+                    optionsEl.innerHTML = '';
+                    window.setTimeout(askCurrentStep, 250);
+                    return;
+                }
+
+                if (isFinalStep) {
+                    window.setTimeout(() => {
+                        addMessage('Puedes presionar "Reiniciar demo" para probar otra ruta de preguntas.', 'ai');
+                    }, 250);
+                    return;
+                }
+
+                step += 1;
+                optionsEl.innerHTML = '';
+                sendBtn.disabled = true;
+
+                window.setTimeout(askCurrentStep, 450);
+            }
+
+            formEl.addEventListener('submit', () => handleUserReply(inputEl.value));
+
+            inputEl.addEventListener('keydown', (event) => {
+                if (event.key !== 'Enter') return;
+                event.preventDefault();
+                handleUserReply(inputEl.value);
+                inputEl.value = '';
+            });
+
+            formEl.addEventListener('submit', () => {
+                inputEl.value = '';
+            });
+
+            askCurrentStep();
+        })();
     </script>
 </body>
 </html>

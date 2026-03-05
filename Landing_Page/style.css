@@ -15,6 +15,10 @@
     --shadow-soft: 0 10px 28px rgba(12, 18, 53, 0.08);
     --shadow-hover: 0 16px 34px rgba(12, 18, 53, 0.14);
     --hero-dark: #111a8f;
+    --wellness-mint: #a8e4cd;
+    --wellness-ice: #dce2e8;
+    --wellness-yellow: #eadc6c;
+    --wellness-lilac: #e4c9e0;
 }
 
 * {
@@ -546,15 +550,72 @@ textarea {
     color: var(--white);
 }
 
+.specialists-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 0.55rem;
+}
+
+.carousel-arrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid rgba(31, 42, 222, 0.28);
+    background: var(--white);
+    color: var(--primary-blue);
+    font-size: 1.08rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
 .doctor-grid {
     margin-top: 1.3rem;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
     gap: 1rem;
+    overflow-x: auto;
+    padding: 0.2rem 0.15rem 0.8rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    touch-action: pan-y;
+}
+
+.doctor-grid::-webkit-scrollbar {
+    height: 10px;
+}
+
+.doctor-grid::-webkit-scrollbar-track {
+    background: rgba(140, 181, 255, 0.18);
+    border-radius: 999px;
+}
+
+.doctor-grid::-webkit-scrollbar-thumb {
+    background: rgba(31, 42, 222, 0.42);
+    border-radius: 999px;
+}
+
+.doctor-grid.is-dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;
+    user-select: none;
 }
 
 .doctor-card {
     overflow: hidden;
+    flex: 0 0 clamp(230px, 24vw, 280px);
+    scroll-snap-align: start;
 }
 
 .doctor-card img {
@@ -592,6 +653,101 @@ textarea {
 .doctor-body .btn {
     width: 100%;
     margin-top: 0.75rem;
+}
+
+.carousel-note {
+    margin-top: 0.55rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.wellness-section {
+    background: #f5f7fb;
+}
+
+.wellness-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.wellness-link {
+    border: 1px solid rgba(12, 18, 53, 0.28);
+    border-radius: 999px;
+    padding: 0.8rem 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.wellness-blog-grid {
+    margin-top: 1.8rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.wellness-post-card {
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(31, 42, 222, 0.1);
+    box-shadow: var(--shadow-soft);
+}
+
+.wellness-cover {
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.wellness-cover-1 {
+    background-image: url('./assets/wellness/article-1.png');
+    background-color: #d7e4ff;
+}
+
+.wellness-cover-2 {
+    background-image: url('./assets/wellness/article-2.png');
+    background-color: #dfe7ff;
+}
+
+.wellness-cover-3 {
+    background-image: url('./assets/wellness/article-3.png');
+    background-color: #d5e0ff;
+}
+
+.wellness-post-body {
+    padding: 1.3rem;
+}
+
+.wellness-post-body h3 {
+    font-size: clamp(1.45rem, 1.8vw, 1.95rem);
+    line-height: 1.18;
+}
+
+.wellness-post-body p {
+    margin-top: 0.6rem;
+    color: var(--text-muted);
+}
+
+.wellness-post-meta {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.wellness-tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    background: #edf2ff;
+    color: #4965ec;
+    padding: 0.45rem 0.95rem;
+    font-weight: 700;
 }
 
 .hybrid-grid {
@@ -735,22 +891,96 @@ textarea {
 }
 
 .contact-cta {
-    background: linear-gradient(140deg, var(--primary-blue), var(--hero-dark));
+    background: #0c1342;
     color: var(--white);
-    padding: 6rem 0;
+    padding: 5rem 0 3rem;
 }
 
 .contact-inner {
+    position: relative;
+}
+
+.cta-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 44px;
+    background: linear-gradient(130deg, #2f74ff 0%, #3f63eb 100%);
+    min-height: 460px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.cta-shape {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.cta-shape-a {
+    width: min(48vw, 620px);
+    aspect-ratio: 1 / 1;
+    left: -19%;
+    top: -20%;
+    background: #1db3dd;
+}
+
+.cta-shape-b {
+    width: min(30vw, 380px);
+    aspect-ratio: 1 / 1;
+    left: 8%;
+    bottom: -36%;
+    background: #a7dcec;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    margin-left: clamp(28%, 31vw, 34%);
+    padding: clamp(2rem, 3vw, 3.5rem) clamp(1.4rem, 3vw, 2.8rem);
+    max-width: 780px;
+}
+
+.cta-content h2 {
+    margin-top: 0.7rem;
+    font-size: clamp(2.3rem, 5vw, 5rem);
+    color: rgba(255, 255, 255, 0.96);
+    line-height: 1.02;
+}
+
+.cta-actions {
+    margin-top: 1.5rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.cta-btn-main {
+    background: #0f1a52;
+    color: var(--white);
+    min-width: 250px;
+    border-radius: 999px;
+}
+
+.cta-btn-main:hover {
+    background: #111f5f;
+}
+
+.cta-btn-ghost {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    color: var(--white);
+    background: transparent;
+    min-width: 250px;
+    border-radius: 999px;
+}
+
+.cta-btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .site-footer {
-    background: #ffffff;
-    border-top: 1px solid rgba(31, 42, 222, 0.12);
+    background: #0c1342;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
     padding: 2.1rem 0;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-grid {
@@ -769,16 +999,12 @@ textarea {
 
 .footer-legal {
     grid-column: 1 / -1;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.72);
     font-size: 0.9rem;
 }
 
 @media (max-width: 1120px) {
     .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .doctor-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -788,6 +1014,10 @@ textarea {
     .hybrid-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .wellness-blog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .hero {
@@ -838,13 +1068,38 @@ textarea {
 
     .steps-grid,
     .resource-grid,
-    .upload-grid,
-    .contact-inner {
+    .upload-grid {
         grid-template-columns: 1fr;
     }
 
-    .contact-inner {
-        display: grid;
+    .cta-panel {
+        min-height: 410px;
+        border-radius: 30px;
+    }
+
+    .cta-content {
+        margin-left: 0;
+        padding: 1.6rem;
+    }
+
+    .cta-shape-a {
+        width: 290px;
+        left: -130px;
+        top: -70px;
+    }
+
+    .cta-shape-b {
+        width: 240px;
+        left: -65px;
+        bottom: -140px;
+    }
+
+    .cta-content h2 {
+        font-size: clamp(2rem, 9vw, 3.1rem);
+    }
+
+    .cta-actions .btn {
+        min-width: 100%;
     }
 
     .section {
@@ -858,5 +1113,27 @@ textarea {
 
     .service-card {
         min-height: 190px;
+    }
+
+    .doctor-card {
+        flex-basis: min(84vw, 300px);
+    }
+
+    .specialists-head,
+    .wellness-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .wellness-link {
+        font-size: 0.98rem;
+    }
+
+    .wellness-blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wellness-cover {
+        min-height: 220px;
     }
 }

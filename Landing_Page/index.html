@@ -22,6 +22,7 @@
                 <a href="#como-funciona">Cómo funciona</a>
                 <a href="#evaluacion">Evaluación</a>
                 <a href="#especialistas">Especialistas</a>
+                <a href="#wellness">Wellness</a>
                 <a href="#historial">Historial</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contacto">Contacto</a>
@@ -174,37 +175,27 @@
 
         <section id="especialistas" class="section section-alt">
             <div class="container">
-                <div class="section-head">
-                    <p class="eyebrow eyebrow-blue">Especialistas</p>
-                    <h2>Encuentra especialistas disponibles.</h2>
+                <div class="specialists-head">
+                    <div class="section-head">
+                        <p class="eyebrow eyebrow-blue">Especialistas</p>
+                        <h2>Encuentra especialistas disponibles.</h2>
+                    </div>
+                    <div class="carousel-controls" aria-label="Controles de carrusel">
+                        <button class="carousel-arrow" type="button" data-carousel-dir="prev" aria-label="Ver especialista anterior">←</button>
+                        <button class="carousel-arrow" type="button" data-carousel-dir="next" aria-label="Ver siguiente especialista">→</button>
+                    </div>
                 </div>
                 <div class="category-chips" role="tablist" aria-label="Categorías médicas">
-                    <button type="button" class="cat-chip is-active">Medicina General</button>
+                    <button type="button" class="cat-chip is-active">Cardiología</button>
                     <button type="button" class="cat-chip">Neurología</button>
-                    <button type="button" class="cat-chip">Cardiología</button>
-                    <button type="button" class="cat-chip">Neumología</button>
-                    <button type="button" class="cat-chip">Gastro</button>
                     <button type="button" class="cat-chip">Ginecología</button>
-                    <button type="button" class="cat-chip">Pediatría</button>
                     <button type="button" class="cat-chip">Dermatología</button>
                 </div>
-                <div class="doctor-grid">
+                <div id="doctor-carousel" class="doctor-grid" aria-label="Carrusel de especialistas">
                     <article class="doctor-card">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80" alt="Dra. Laura Martínez">
+                        <img src="./assets/especialistas/cardiologia.png" alt="Especialista en Cardiología">
                         <div class="doctor-body">
-                            <h3>Dra. Laura Martínez</h3>
-                            <p>Medicina General</p>
-                            <div class="doctor-meta">
-                                <span>★ 4.9</span>
-                                <span class="available">Disponible hoy</span>
-                            </div>
-                            <button class="btn btn-outline" type="button">Agendar</button>
-                        </div>
-                    </article>
-                    <article class="doctor-card">
-                        <img src="https://images.unsplash.com/photo-1612531385446-f7b7c0f4e7d1?auto=format&fit=crop&w=900&q=80" alt="Dr. Daniel Rojas">
-                        <div class="doctor-body">
-                            <h3>Dr. Daniel Rojas</h3>
+                            <h3>Dr Manuel Betancourt</h3>
                             <p>Cardiología</p>
                             <div class="doctor-meta">
                                 <span>★ 4.8</span>
@@ -214,10 +205,10 @@
                         </div>
                     </article>
                     <article class="doctor-card">
-                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=80" alt="Dra. Sofía Herrera">
+                        <img src="./assets/especialistas/neurologia.png" alt="Especialista en Neurología">
                         <div class="doctor-body">
-                            <h3>Dra. Sofía Herrera</h3>
-                            <p>Neumología</p>
+                            <h3>Dr Dereck Shepard</h3>
+                            <p>Neurología</p>
                             <div class="doctor-meta">
                                 <span>★ 4.9</span>
                                 <span class="available">Disponible hoy</span>
@@ -226,15 +217,75 @@
                         </div>
                     </article>
                     <article class="doctor-card">
-                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=900&q=80" alt="Dr. Andrés Vega">
+                        <img src="./assets/especialistas/ginecologia.png" alt="Especialista en Ginecología">
                         <div class="doctor-body">
-                            <h3>Dr. Andrés Vega</h3>
-                            <p>Gastroenterología</p>
+                            <h3>Dr Addison Montgomery</h3>
+                            <p>Ginecología</p>
+                            <div class="doctor-meta">
+                                <span>★ 4.9</span>
+                                <span class="available">Disponible hoy</span>
+                            </div>
+                            <button class="btn btn-outline" type="button">Agendar</button>
+                        </div>
+                    </article>
+                    <article class="doctor-card">
+                        <img src="./assets/especialistas/dermatologia.png" alt="Especialista en Dermatología">
+                        <div class="doctor-body">
+                            <h3>Dr Paula Baquero</h3>
+                            <p>Dermatología</p>
                             <div class="doctor-meta">
                                 <span>★ 4.7</span>
                                 <span class="available">Disponible hoy</span>
                             </div>
                             <button class="btn btn-outline" type="button">Agendar</button>
+                        </div>
+                    </article>
+                </div>
+                <p class="carousel-note">Desliza horizontalmente. El carrusel se mueve en loop infinito.</p>
+            </div>
+        </section>
+
+        <section id="wellness" class="section wellness-section">
+            <div class="container">
+                <div class="wellness-head">
+                    <div>
+                        <p class="eyebrow eyebrow-blue">Wellness Educativo</p>
+                        <h2>Aprende a cuidar tu salud entre consultas</h2>
+                    </div>
+                    <a href="#contacto" class="wellness-link">Explorar artículos</a>
+                </div>
+                <div class="wellness-blog-grid">
+                    <article class="wellness-post-card">
+                        <div class="wellness-cover wellness-cover-1" role="img" aria-label="Consulta preventiva"></div>
+                        <div class="wellness-post-body">
+                            <h3>3 hábitos diarios para prevenir descompensaciones</h3>
+                            <p>Acciones simples para mejorar sueño, energía y señales tempranas de riesgo.</p>
+                            <div class="wellness-post-meta">
+                                <span class="wellness-tag">Prevención</span>
+                                <span>Mar 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="wellness-post-card">
+                        <div class="wellness-cover wellness-cover-2" role="img" aria-label="Revisión de síntomas"></div>
+                        <div class="wellness-post-body">
+                            <h3>Cómo entender tus síntomas antes de la evaluación</h3>
+                            <p>Qué datos reunir para que Sophie te oriente con mayor precisión clínica.</p>
+                            <div class="wellness-post-meta">
+                                <span class="wellness-tag">Síntomas</span>
+                                <span>Mar 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="wellness-post-card">
+                        <div class="wellness-cover wellness-cover-3" role="img" aria-label="Consulta con especialista"></div>
+                        <div class="wellness-post-body">
+                            <h3>Cómo prepararte para tu cita con especialista</h3>
+                            <p>Llega con contexto clínico claro para aprovechar mejor tu consulta médica.</p>
+                            <div class="wellness-post-meta">
+                                <span class="wellness-tag">Ruta de acción</span>
+                                <span>Mar 2026</span>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -345,8 +396,18 @@
 
         <section id="contacto" class="section contact-cta">
             <div class="container contact-inner">
-                <h2>Únete a la lista de espera</h2>
-                <a href="#inicio" class="btn btn-primary">Lista de espera</a>
+                <article class="cta-panel" aria-label="Reserva tu cita">
+                    <div class="cta-shape cta-shape-a"></div>
+                    <div class="cta-shape cta-shape-b"></div>
+                    <div class="cta-content">
+                        <p class="eyebrow">Reserva ahora</p>
+                        <h2>Agenda tu orientación médica hoy</h2>
+                        <div class="cta-actions">
+                            <a href="#evaluacion" class="btn cta-btn-main">Llamar y reservar</a>
+                            <a href="#especialistas" class="btn cta-btn-ghost">Ver especialistas</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -360,6 +421,7 @@
             <div class="footer-links">
                 <a href="#proposito">Propósito</a>
                 <a href="#especialistas">Especialistas</a>
+                <a href="#wellness">Wellness</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contacto">Contacto</a>
             </div>
@@ -410,6 +472,111 @@
                 }
             });
         });
+
+        const doctorCarousel = document.querySelector('#doctor-carousel');
+        if (doctorCarousel) {
+            const originalCards = Array.from(doctorCarousel.querySelectorAll('.doctor-card'));
+
+            if (originalCards.length > 1) {
+                const prependFragment = document.createDocumentFragment();
+                const appendFragment = document.createDocumentFragment();
+
+                originalCards.forEach((card) => {
+                    const cloneBefore = card.cloneNode(true);
+                    cloneBefore.dataset.clone = 'true';
+                    prependFragment.appendChild(cloneBefore);
+
+                    const cloneAfter = card.cloneNode(true);
+                    cloneAfter.dataset.clone = 'true';
+                    appendFragment.appendChild(cloneAfter);
+                });
+
+                doctorCarousel.insertBefore(prependFragment, doctorCarousel.firstChild);
+                doctorCarousel.appendChild(appendFragment);
+            }
+
+            const getLoopWidth = () => {
+                const cards = doctorCarousel.querySelectorAll('.doctor-card:not([data-clone])');
+                if (!cards.length) return 0;
+                const gap = parseFloat(getComputedStyle(doctorCarousel).gap) || 0;
+                const cardWidth = cards[0].getBoundingClientRect().width;
+                return (cardWidth + gap) * cards.length;
+            };
+
+            const jumpWithoutAnimation = (target) => {
+                doctorCarousel.style.scrollBehavior = 'auto';
+                doctorCarousel.scrollLeft = target;
+                requestAnimationFrame(() => {
+                    doctorCarousel.style.scrollBehavior = '';
+                });
+            };
+
+            const alignToMiddleTrack = () => {
+                const loopWidth = getLoopWidth();
+                if (!loopWidth) return;
+                jumpWithoutAnimation(loopWidth);
+            };
+
+            const getScrollStep = () => {
+                const firstCard = doctorCarousel.querySelector('.doctor-card');
+                if (!firstCard) return 260;
+                const gap = parseFloat(getComputedStyle(doctorCarousel).gap) || 0;
+                return firstCard.getBoundingClientRect().width + gap;
+            };
+
+            alignToMiddleTrack();
+            window.addEventListener('resize', alignToMiddleTrack);
+
+            let isDragging = false;
+            let startX = 0;
+            let startScroll = 0;
+
+            const stopDrag = () => {
+                isDragging = false;
+                doctorCarousel.classList.remove('is-dragging');
+            };
+
+            doctorCarousel.addEventListener('pointerdown', (event) => {
+                if (event.pointerType === 'mouse' && event.button !== 0) return;
+                isDragging = true;
+                startX = event.clientX;
+                startScroll = doctorCarousel.scrollLeft;
+                doctorCarousel.classList.add('is-dragging');
+                doctorCarousel.setPointerCapture(event.pointerId);
+            });
+
+            doctorCarousel.addEventListener('pointermove', (event) => {
+                if (!isDragging) return;
+                const delta = event.clientX - startX;
+                doctorCarousel.scrollLeft = startScroll - delta * 1.25;
+            });
+
+            doctorCarousel.addEventListener('scroll', () => {
+                const loopWidth = getLoopWidth();
+                if (!loopWidth) return;
+
+                if (doctorCarousel.scrollLeft < loopWidth * 0.5) {
+                    jumpWithoutAnimation(doctorCarousel.scrollLeft + loopWidth);
+                } else if (doctorCarousel.scrollLeft > loopWidth * 1.5) {
+                    jumpWithoutAnimation(doctorCarousel.scrollLeft - loopWidth);
+                }
+            });
+
+            doctorCarousel.addEventListener('pointerup', stopDrag);
+            doctorCarousel.addEventListener('pointercancel', stopDrag);
+            doctorCarousel.addEventListener('pointerleave', stopDrag);
+
+            doctorCarousel.querySelectorAll('img').forEach((image) => {
+                image.setAttribute('draggable', 'false');
+            });
+
+            document.querySelectorAll('.carousel-arrow').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const direction = button.dataset.carouselDir === 'next' ? 1 : -1;
+                    doctorCarousel.scrollBy({ left: getScrollStep() * direction, behavior: 'smooth' });
+                });
+            });
+        }
     </script>
 </body>
 </html>

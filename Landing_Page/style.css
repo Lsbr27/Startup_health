@@ -381,37 +381,71 @@ textarea {
     cursor: pointer;
 }
 
-.steps-grid {
-    margin-top: 2rem;
+.process-layout {
+    background: #e9f1ee;
+    border-radius: 34px;
+    padding: clamp(1.4rem, 3vw, 3rem);
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(1.4rem, 3vw, 2.6rem);
+}
+
+.process-intro h2 {
+    font-size: clamp(2.1rem, 4.2vw, 4.4rem);
+}
+
+.process-intro p:last-child {
+    margin-top: 1rem;
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    color: #5e6568;
+    max-width: 36ch;
+}
+
+.process-timeline {
+    position: relative;
+    display: grid;
     gap: 1rem;
 }
 
-.step-card {
-    background: var(--white);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(31, 42, 222, 0.1);
-    padding: 1.2rem;
-    box-shadow: var(--shadow-soft);
+.process-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
 }
 
-.step-number {
-    width: 34px;
-    height: 34px;
+.process-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 36px;
+    top: 64px;
+    width: 1px;
+    height: calc(100% - 16px);
+    background: rgba(94, 101, 104, 0.35);
+}
+
+.process-icon {
+    width: 74px;
+    height: 74px;
     border-radius: 999px;
+    background: var(--white);
+    border: 1px solid rgba(31, 42, 222, 0.12);
     display: grid;
     place-items: center;
-    background: var(--primary-blue);
-    color: var(--white);
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-bottom: 0.8rem;
+    font-size: 1.65rem;
+    line-height: 1;
 }
 
-.step-card p {
-    margin-top: 0.55rem;
-    color: var(--text-muted);
+.process-step h3 {
+    font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+    line-height: 1.1;
+}
+
+.process-step p {
+    margin-top: 0.4rem;
+    color: #5e6568;
+    font-size: clamp(1rem, 1.3vw, 1.12rem);
 }
 
 .eval-layout {
@@ -1011,7 +1045,8 @@ textarea {
     .hero-layout,
     .eval-layout,
     .history-layout,
-    .hybrid-grid {
+    .hybrid-grid,
+    .process-layout {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
@@ -1066,7 +1101,6 @@ textarea {
         text-align: center;
     }
 
-    .steps-grid,
     .resource-grid,
     .upload-grid {
         grid-template-columns: 1fr;
@@ -1123,6 +1157,23 @@ textarea {
     .wellness-head {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .process-step {
+        grid-template-columns: 56px minmax(0, 1fr);
+        gap: 0.8rem;
+    }
+
+    .process-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.25rem;
+    }
+
+    .process-step:not(:last-child)::after {
+        left: 27px;
+        top: 50px;
+        height: calc(100% - 10px);
     }
 
     .wellness-link {

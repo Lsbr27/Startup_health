@@ -32,42 +32,27 @@
     </header>
 
     <main id="inicio">
-        <section class="hero" aria-label="Hero principal">
-            <div class="container hero-layout">
-                <div class="hero-copy">
-                    <p class="eyebrow">Clinical Intelligence</p>
-                    <h1>Entendemos tu salud desde el origen.</h1>
-                    <p class="hero-subtitle">Sophie integra síntomas, imágenes y exámenes para orientarte con claridad y priorizar el siguiente paso.</p>
-                    <div class="hero-actions">
-                        <a href="#evaluacion" class="btn btn-primary">Iniciar evaluación</a>
-                        <a href="#como-funciona" class="btn btn-outline-light">Ver cómo funciona</a>
-                    </div>
-                    <p class="hero-note">Orientación preliminar. No reemplaza atención médica.</p>
+        <section class="hero hero-scrub" aria-label="Inicio animado">
+    <div class="container hero-wrapper">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <p class="eyebrow">Clinical Intelligence</p>
+                <h1>Entendemos tu salud desde el origen.</h1>
+                <p class="hero-subtitle">Sophie integra s�ntomas, im�genes y ex�menes para orientarte con claridad y priorizar el siguiente paso.</p>
+                <div class="hero-actions">
+                    <a href="#evaluacion" class="btn btn-primary">Iniciar evaluaci�n</a>
+                    <a href="#como-funciona" class="btn btn-outline-light">Ver c�mo funciona</a>
                 </div>
-                <aside class="hero-preview" aria-label="Vista previa de evaluación">
-                    <div class="preview-top">
-                        <span>Sophie Flow</span>
-                        <span class="status-pill">Caso activo</span>
-                    </div>
-                    <h3>Evaluación en curso</h3>
-                    <div class="progress-row">
-                        <span>Captura clínica</span>
-                        <strong>68%</strong>
-                    </div>
-                    <div class="progress-track"><span></span></div>
-                    <div class="chip-row">
-                        <span class="chip">Síntomas</span>
-                        <span class="chip">Radiografía</span>
-                        <span class="chip">Laboratorio</span>
-                    </div>
-                    <div class="priority-card">
-                        <p>Nivel de urgencia</p>
-                        <strong>Moderada</strong>
-                    </div>
-                    <button class="btn btn-soft" type="button">Ver especialistas</button>
-                </aside>
+                <p class="hero-note">Orientaci�n preliminar. No reemplaza atenci�n m�dica.</p>
             </div>
-        </section>
+            <div class="hero-animation">
+                <div class="hero-visual">
+                    <canvas class="hero-canvas" role="img" aria-label="Sophie AI hero animation"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="proposito" class="section">
             <div class="container">
@@ -594,5 +579,159 @@
             });
         }
     </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hero = document.querySelector('.hero.hero-scrub');
+  const canvas = document.querySelector('.hero-canvas');
+  if (!hero || !canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  const TOTAL_FRAMES = 120;
+  const pad = (num) => String(num).padStart(3, '0');
+  const frameSrc = (frame) => `Animation_Parallax/frames/ezgif-frame-${pad(frame)}.png`;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const frames = Array.from({ length: TOTAL_FRAMES }, (_, i) => {
+    const img = new Image();
+    img.src = frameSrc(i + 1);
+    img.decoding = 'async';
+    return img;
+  });
+
+  const decodeAll = async () => {
+    await Promise.all(
+      frames.map((img) => (img.decode ? img.decode().catch(() => {}) : Promise.resolve()))
+    );
+  };
+
+  decodeAll();
+
+  let heroTop = 0;
+  let heroHeight = 0;
+  let scrollLength = 1;
+  let targetFrame = 1;
+  let currentFrame = 1;
+  let displayedFrame = 0;
+  let rafId = null;
+
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+  const resizeCanvas = () => {
+    const rect = canvas.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(rect.width * dpr);
+    canvas.height = Math.round(rect.height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    drawFrame(Math.round(currentFrame));
+  };
+
+  const drawFrame = (frame) => {
+    const img = frames[frame - 1];
+    if (!img || !img.complete) return;
+    const cw = canvas.clientWidth;
+    const ch = canvas.clientHeight;
+    if (!cw || !ch) return;
+    const iw = img.naturalWidth || 1280;
+    const ih = img.naturalHeight || 720;
+    const scale = Math.max(cw / iw, ch / ih);
+    const dw = iw * scale;
+    const dh = ih * scale;
+    const dx = (cw - dw) / 2;
+    const dy = (ch - dh) / 2;
+    ctx.clearRect(0, 0, cw, ch);
+    ctx.drawImage(img, dx, dy, dw, dh);
+  };
+
+  const measure = () => {
+    const rect = hero.getBoundingClientRect();
+    heroTop = window.scrollY + rect.top;
+    heroHeight = rect.height;
+    scrollLength = Math.max(window.innerHeight * 0.2, heroHeight * 0.3);
+  };
+
+  const updateTargetFromScroll = () => {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const rawProgress = clamp((scrollY - heroTop) / scrollLength, 0, 1);
+    const progress = clamp(rawProgress * 1.6, 0, 1);
+    targetFrame = 1 + Math.round(progress * (TOTAL_FRAMES - 1));
+  };
+
+  const ensureFrameReady = (frame) => {
+    const img = frames[frame - 1];
+    if (!img) return false;
+    if (img.complete) return true;
+    img.addEventListener('load', () => {
+      if (Math.round(currentFrame) === frame) {
+        drawFrame(frame);
+      }
+    }, { once: true });
+    return false;
+  };
+
+  const tick = () => {
+    const delta = targetFrame - currentFrame;
+    currentFrame += delta * 0.18;
+
+    const nextFrame = Math.round(currentFrame);
+    if (nextFrame !== displayedFrame && ensureFrameReady(nextFrame)) {
+      drawFrame(nextFrame);
+      displayedFrame = nextFrame;
+    }
+
+    if (Math.abs(delta) > 0.01) {
+      rafId = window.requestAnimationFrame(tick);
+    } else {
+      rafId = null;
+    }
+  };
+
+  const requestTick = () => {
+    if (!rafId) {
+      rafId = window.requestAnimationFrame(tick);
+    }
+  };
+
+  if (reduceMotion) {
+    frames[0].addEventListener('load', () => {
+      resizeCanvas();
+      drawFrame(1);
+    }, { once: true });
+    resizeCanvas();
+    return;
+  }
+
+  measure();
+  resizeCanvas();
+  updateTargetFromScroll();
+  requestTick();
+
+  window.addEventListener('scroll', () => {
+    updateTargetFromScroll();
+    requestTick();
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    measure();
+    resizeCanvas();
+    updateTargetFromScroll();
+    requestTick();
+  }, { passive: true });
+
+  frames[0].addEventListener('load', () => {
+    resizeCanvas();
+    drawFrame(1);
+  }, { once: true });
+});
+</script>
 </body>
 </html>
+
+
+
+

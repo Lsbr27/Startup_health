@@ -3,6 +3,6 @@
   "public": true,
   "routes": [
     { "src": "/", "dest": "/Landing_Page/index.html" },
-    { "src": "^/(.*)$", "dest": "/$1" }
+    { "src": "^/(.*)$", "dest": "/Landing_Page/$1" }
   ]
 }

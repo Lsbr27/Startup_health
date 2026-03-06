@@ -8,22 +8,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container nav-wrap">
-            <a href="#inicio" class="logo">Sophie AI</a>
+            <a href="#inicio" class="logo" aria-label="Inicio Sophie AI">
+                <img src="./assets/branding/logo/logo-trimmed.png" alt="Logo Sophie AI">
+            </a>
             <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
                 <span></span><span></span><span></span>
             </button>
             <nav id="main-nav" class="main-nav">
                 <a href="#proposito">Propósito</a>
+                <a href="#vision">Visión</a>
                 <a href="#como-funciona">Cómo funciona</a>
-                <a href="#evaluacion">Evaluación</a>
                 <a href="#especialistas">Especialistas</a>
                 <a href="#wellness">Wellness</a>
-                <a href="#historial">Historial</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contacto">Contacto</a>
             </nav>
@@ -37,14 +39,13 @@
         <div class="hero-grid">
             <div class="hero-text">
                 <p class="eyebrow">Clinical Intelligence</p>
-                <h1>Entendemos tu salud desde el origen.</h1>
-                <p class="hero-subtitle">Sophie integra s�ntomas, im�genes y ex�menes para orientarte con claridad y priorizar el siguiente paso.</p>
+                <h1>Agenda tu orientación médica hoy</h1>
                 <div class="hero-actions">
-                    <a href="#evaluacion" class="btn btn-primary">Iniciar evaluaci�n</a>
-                    <a href="#como-funciona" class="btn btn-outline-light">Ver c�mo funciona</a>
+                    <a href="#contacto" class="btn btn-primary">Llamar y reservar</a>
+                    <a href="#especialistas" class="btn btn-outline-light">Ver especialistas</a>
                 </div>
-                <p class="hero-note">Orientaci�n preliminar. No reemplaza atenci�n m�dica.</p>
             </div>
+
             <div class="hero-animation">
                 <div class="hero-visual">
                     <canvas class="hero-canvas" role="img" aria-label="Sophie AI hero animation"></canvas>
@@ -54,36 +55,84 @@
     </div>
 </section>
 
+        <section id="vision" class="section vision-section">
+            <div class="container vision-layout">
+                <div class="vision-copy">
+                    <p class="eyebrow">Nuestra visión</p>
+                    <h2>Hacia una salud proactiva, clara y humana.</h2>
+                    <p class="vision-lead">Sophie transforma síntomas, imágenes y exámenes en una orientación preliminar comprensible para que cada persona decida con más confianza su siguiente paso.</p>
+                    <div class="vision-points">
+                        <article class="vision-point">
+                            <span class="vision-icon" aria-hidden="true">◎</span>
+                            <div>
+                                <h3>Acceso orientativo</h3>
+                                <p>Información clínica estructurada, accesible y accionable para cualquier persona.</p>
+                            </div>
+                        </article>
+                        <article class="vision-point">
+                            <span class="vision-icon" aria-hidden="true">✚</span>
+                            <div>
+                                <h3>Decisiones mejor acompañadas</h3>
+                                <p>Conecta hallazgos con especialistas para reducir incertidumbre y acelerar el cuidado.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="vision-media-grid" aria-hidden="true">
+                    <div class="vision-media-card vision-media-tall">
+                        <div class="vision-orb vision-orb-a"></div>
+                        <div class="vision-orb vision-orb-b"></div>
+                        <div class="vision-lines"></div>
+                    </div>
+                    <div class="vision-media-card vision-media-top">
+                        <div class="vision-grid-glow"></div>
+                        <span class="vision-chip">Lectura clínica</span>
+                    </div>
+                    <div class="vision-media-card vision-media-gradient"></div>
+                    <div class="vision-media-card vision-media-bottom">
+                        <div class="vision-wave"></div>
+                        <span class="vision-chip">Contexto del paciente</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="proposito" class="section">
             <div class="container">
                 <div class="section-head">
                     <p class="eyebrow eyebrow-blue">Propósito</p>
                     <h2>Una sola lectura clínica para decidir mejor.</h2>
                 </div>
-                <div class="services-grid">
-                    <article class="service-card service-a">
-                        <div class="service-icon">✦</div>
-                        <h3>Síntomas</h3>
-                        <p>Describe lo que sientes en 60 segundos.</p>
-                        <button class="arrow-btn" type="button" aria-label="Ver síntomas">→</button>
+                <div class="capability-grid">
+                    <article class="capability-card">
+                        <div class="capability-icon">◌</div>
+                        <h3>Evaluación de síntomas</h3>
+                        <p>Describe lo que sientes y organiza la información clínica para orientarte mejor.</p>
                     </article>
-                    <article class="service-card service-b">
-                        <div class="service-icon">◉</div>
-                        <h3>Radiografías e imágenes</h3>
-                        <p>Sube imágenes y obtiene hallazgos orientativos.</p>
-                        <button class="arrow-btn" type="button" aria-label="Ver imágenes">→</button>
+                    <article class="capability-card">
+                        <div class="capability-icon">⌁</div>
+                        <h3>Interpretación de imágenes</h3>
+                        <p>Sube radiografías o imágenes médicas para obtener una lectura orientativa.</p>
                     </article>
-                    <article class="service-card service-c">
-                        <div class="service-icon">⌁</div>
-                        <h3>Exámenes de sangre</h3>
-                        <p>Interpreta rangos y patrones relevantes.</p>
-                        <button class="arrow-btn" type="button" aria-label="Ver exámenes">→</button>
+                    <article class="capability-card">
+                        <div class="capability-icon">+</div>
+                        <h3>Análisis de exámenes</h3>
+                        <p>Integra resultados de laboratorio y detecta rangos o patrones relevantes.</p>
                     </article>
-                    <article class="service-card service-d">
-                        <div class="service-icon">✓</div>
-                        <h3>Plan de acción</h3>
-                        <p>Autocuidado, urgencias o especialista recomendado.</p>
-                        <button class="arrow-btn" type="button" aria-label="Ver plan de acción">→</button>
+                    <article class="capability-card">
+                        <div class="capability-icon">✓</div>
+                        <h3>Prioridad clínica</h3>
+                        <p>Estimación del nivel de urgencia y sugerencia del siguiente paso.</p>
+                    </article>
+                    <article class="capability-card">
+                        <div class="capability-icon">▣</div>
+                        <h3>Historial organizado</h3>
+                        <p>Toda tu información clínica queda estructurada y accesible.</p>
+                    </article>
+                    <article class="capability-card">
+                        <div class="capability-icon">◎</div>
+                        <h3>Red de especialistas</h3>
+                        <p>Conecta con profesionales adecuados según tu caso.</p>
                     </article>
                 </div>
             </div>
@@ -131,49 +180,6 @@
             </div>
         </section>
 
-        <section id="evaluacion" class="section">
-            <div class="container eval-layout">
-                <div class="eval-panel">
-                    <h2>Evaluación clínica guiada</h2>
-                    <label>¿Qué sientes?
-                        <textarea rows="4" placeholder="Ej: dolor torácico, tos persistente, fatiga"></textarea>
-                    </label>
-                    <div class="toggle-wrap" aria-label="Síntomas frecuentes">
-                        <button class="toggle-chip" type="button">Fiebre</button>
-                        <button class="toggle-chip" type="button">Dolor</button>
-                        <button class="toggle-chip" type="button">Tos</button>
-                        <button class="toggle-chip" type="button">Náuseas</button>
-                        <button class="toggle-chip" type="button">Mareo</button>
-                    </div>
-                    <div class="upload-grid">
-                        <button class="upload-box" type="button">Radiografía/imagen</button>
-                        <button class="upload-box" type="button">Examen de sangre (PDF/foto)</button>
-                    </div>
-                    <button class="btn btn-primary" type="button">Analizar</button>
-                </div>
-                <aside class="result-panel" aria-label="Resultado preliminar">
-                    <h3>Posibles diagnósticos a considerar (orientativo)</h3>
-                    <ul>
-                        <li>Síndrome respiratorio inflamatorio</li>
-                        <li>Respuesta sistémica al estrés</li>
-                        <li>Cuadro metabólico en evaluación</li>
-                    </ul>
-                    <div class="result-row">
-                        <span>Nivel de prioridad</span>
-                        <strong class="tag-priority tag-moderada">Moderada</strong>
-                    </div>
-                    <div class="result-row">
-                        <span>Siguiente paso recomendado</span>
-                        <strong>Especialista</strong>
-                    </div>
-                    <div class="result-row">
-                        <span>Escenario alterno</span>
-                        <strong class="tag-priority tag-alta">Alta</strong>
-                    </div>
-                </aside>
-            </div>
-        </section>
-
         <section id="especialistas" class="section section-alt">
             <div class="container">
                 <div class="specialists-head">
@@ -206,7 +212,7 @@
                         </div>
                     </article>
                     <article class="doctor-card">
-                        <img src="./assets/especialistas/neurologia.png" alt="Especialista en Neurología">
+                        <img src="./assets/especialistas/Neurologia.png" alt="Especialista en Neurología">
                         <div class="doctor-body">
                             <h3>Dr Dereck Shepard</h3>
                             <p>Neurología</p>
@@ -218,7 +224,7 @@
                         </div>
                     </article>
                     <article class="doctor-card">
-                        <img src="./assets/especialistas/ginecologia.png" alt="Especialista en Ginecología">
+                        <img src="./assets/especialistas/Ginecologia.png" alt="Especialista en Ginecología">
                         <div class="doctor-body">
                             <h3>Dr Addison Montgomery</h3>
                             <p>Ginecología</p>
@@ -293,86 +299,19 @@
             </div>
         </section>
 
-        <section id="modelo" class="section">
-            <div class="container">
-                <div class="section-head">
-                    <p class="eyebrow eyebrow-blue">Modelo híbrido</p>
-                    <h2>Modelo híbrido: experiencia paciente + eficiencia clínica</h2>
-                </div>
-                <div class="hybrid-grid">
-                    <article class="hybrid-card">
-                        <h3>Pacientes</h3>
-                        <ul>
-                            <li>Orientación preliminar clara</li>
-                            <li>Historial clínico ordenado</li>
-                            <li>Seguimiento continuo de evolución</li>
-                        </ul>
-                    </article>
-                    <article class="hybrid-card">
-                        <h3>Aliados (EPS / clínicas)</h3>
-                        <ul>
-                            <li>Estandarización de captura clínica</li>
-                            <li>Triage inicial y reducción de tiempos</li>
-                            <li>Analítica agregada con consentimiento</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="historial" class="section section-alt">
-            <div class="container history-layout">
-                <div>
-                    <p class="eyebrow eyebrow-blue">Historial</p>
-                    <h2>Tu información organizada, segura y accesible.</h2>
-                </div>
-                <ol class="timeline">
-                    <li><span>Consulta #1</span><p>Síntomas y contexto inicial.</p></li>
-                    <li><span>Exámenes</span><p>Radiografía + laboratorio integrados.</p></li>
-                    <li><span>Recomendación</span><p>Nivel de prioridad y próximos pasos.</p></li>
-                    <li><span>Derivación</span><p>Especialista sugerido y seguimiento.</p></li>
-                </ol>
-            </div>
-        </section>
-
-        <section id="recursos" class="section">
-            <div class="container">
-                <article class="feature-banner">
-                    <div class="feature-overlay">
-                        <p class="eyebrow">Sophie Experience</p>
-                        <h2>Tu salud, prioridad con claridad.</h2>
-                    </div>
-                </article>
-                <div class="resource-grid">
-                    <article class="resource-card">
-                        <h3>Guías clínicas</h3>
-                        <p>Rutas de acción simples para síntomas frecuentes.</p>
-                    </article>
-                    <article class="resource-card">
-                        <h3>Prevención</h3>
-                        <p>Recomendaciones prácticas según riesgo y contexto.</p>
-                    </article>
-                    <article class="resource-card">
-                        <h3>Novedades de la app</h3>
-                        <p>Actualizaciones de funciones y mejoras de experiencia.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="section section-alt">
+        <section id="faq" class="section faq-section">
             <div class="container faq-wrap">
                 <div class="section-head">
-                    <p class="eyebrow eyebrow-blue">FAQ</p>
-                    <h2>Preguntas frecuentes</h2>
+                    <p class="eyebrow eyebrow-blue">Preguntas frecuentes</p>
+                    <h2>Respuestas rápidas y claras</h2>
                 </div>
                 <div class="faq-list">
-                    <article class="faq-item">
-                        <button class="faq-q" type="button" aria-expanded="false">¿Esto reemplaza al médico?</button>
+                    <article class="faq-item is-open">
+                        <button class="faq-q" type="button" aria-expanded="true">¿Esto reemplaza al médico?</button>
                         <div class="faq-a">No. Sophie ofrece orientación preliminar para apoyar decisiones.</div>
                     </article>
-                    <article class="faq-item">
-                        <button class="faq-q" type="button" aria-expanded="false">¿Cómo manejo mis datos?</button>
+                    <article class="faq-item is-open">
+                        <button class="faq-q" type="button" aria-expanded="true">¿Cómo manejo mis datos?</button>
                         <div class="faq-a">Se usan con controles de privacidad y enfoque en seguridad clínica.</div>
                     </article>
                     <article class="faq-item">
@@ -404,7 +343,7 @@
                         <p class="eyebrow">Reserva ahora</p>
                         <h2>Agenda tu orientación médica hoy</h2>
                         <div class="cta-actions">
-                            <a href="#evaluacion" class="btn cta-btn-main">Llamar y reservar</a>
+                            <a href="#contacto" class="btn cta-btn-main">Llamar y reservar</a>
                             <a href="#especialistas" class="btn cta-btn-ghost">Ver especialistas</a>
                         </div>
                     </div>
@@ -421,6 +360,7 @@
             </div>
             <div class="footer-links">
                 <a href="#proposito">Propósito</a>
+                <a href="#vision">Visión</a>
                 <a href="#especialistas">Especialistas</a>
                 <a href="#wellness">Wellness</a>
                 <a href="#faq">FAQ</a>
@@ -463,16 +403,46 @@
             button.addEventListener('click', () => {
                 const item = button.closest('.faq-item');
                 const isOpen = item.classList.contains('is-open');
-                document.querySelectorAll('.faq-item').forEach((f) => {
-                    f.classList.remove('is-open');
-                    f.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-                });
-                if (!isOpen) {
-                    item.classList.add('is-open');
-                    button.setAttribute('aria-expanded', 'true');
-                }
+                item.classList.toggle('is-open', !isOpen);
+                button.setAttribute('aria-expanded', String(!isOpen));
             });
         });
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReducedMotion) {
+            const revealTargets = document.querySelectorAll(
+                '.hero-copy > *, .vision-copy > *, .vision-point, .vision-media-card, .section-head > *, .process-intro > *, .process-step, .capability-card, .doctor-card, .wellness-post-card, .faq-item, .cta-panel'
+            );
+
+            revealTargets.forEach((el) => {
+                el.classList.add('reveal-item');
+                if (el.matches('.capability-card, .doctor-card, .wellness-post-card, .faq-item')) {
+                    el.classList.add('reveal-lift');
+                }
+            });
+
+            const groups = document.querySelectorAll('.hero-copy, .vision-layout, .vision-points, .vision-media-grid, .section, .process-timeline, .doctor-grid, .wellness-blog-grid, .faq-list');
+            groups.forEach((group) => {
+                const children = group.querySelectorAll('.reveal-item');
+                children.forEach((child, index) => {
+                    child.style.setProperty('--reveal-delay', `${Math.min(index * 0.07, 0.42)}s`);
+                });
+            });
+
+            const io = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add('reveal-in');
+                        observer.unobserve(entry.target);
+                    });
+                },
+                { threshold: 0.18, rootMargin: '0px 0px -10% 0px' }
+            );
+
+            revealTargets.forEach((el) => io.observe(el));
+        }
 
         const doctorCarousel = document.querySelector('#doctor-carousel');
         if (doctorCarousel) {

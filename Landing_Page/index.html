@@ -34,64 +34,53 @@
     </header>
 
     <main id="inicio">
-        <section class="hero hero-scrub" aria-label="Inicio animado">
-    <div class="container hero-wrapper">
-        <div class="hero-grid">
-            <div class="hero-text">
-                <p class="eyebrow">Clinical Intelligence</p>
-                <h1>Agenda tu orientación médica hoy</h1>
-                <div class="hero-actions">
-                    <a href="#contacto" class="btn btn-primary">Llamar y reservar</a>
-                    <a href="#especialistas" class="btn btn-outline-light">Ver especialistas</a>
+        <section class="hero" aria-label="Hero principal">
+            <div class="hero-stage">
+                <div class="hero-media" aria-hidden="true">
+                    <img
+                        id="hero-scroll-frame"
+                        class="hero-scroll-frame"
+                        src="./assets/hero-frames/frame_0001.jpg"
+                        alt=""
+                        loading="eager"
+                        decoding="async"
+                    >
+                </div>
+                <div class="container hero-layout">
+                    <div class="hero-copy">
+                        <p class="eyebrow">Clinical Intelligence</p>
+                        <h1>Entendemos tu salud desde el origen.</h1>
+                        <p class="hero-subtitle">Sophie integra síntomas, imágenes y exámenes para orientarte con claridad y priorizar el siguiente paso.</p>
+                        <p class="hero-note">Orientación preliminar. No reemplaza atención médica.</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="hero-animation">
-                <div class="hero-visual">
-                    <canvas class="hero-canvas" role="img" aria-label="Sophie AI hero animation"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section id="vision" class="section vision-section">
             <div class="container vision-layout">
+                <div class="vision-media-video-wrap" aria-label="Ilustración ADN">
+                    <video class="vision-dna-video" muted playsinline preload="metadata">
+                        <source src="./assets/video/WhatsApp Video 2026-03-06 at 11.39.49 AM.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div class="vision-copy">
                     <p class="eyebrow">Nuestra visión</p>
                     <h2>Hacia una salud proactiva, clara y humana.</h2>
                     <p class="vision-lead">Sophie transforma síntomas, imágenes y exámenes en una orientación preliminar comprensible para que cada persona decida con más confianza su siguiente paso.</p>
                     <div class="vision-points">
                         <article class="vision-point">
-                            <span class="vision-icon" aria-hidden="true">◎</span>
                             <div>
                                 <h3>Acceso orientativo</h3>
                                 <p>Información clínica estructurada, accesible y accionable para cualquier persona.</p>
                             </div>
                         </article>
                         <article class="vision-point">
-                            <span class="vision-icon" aria-hidden="true">✚</span>
                             <div>
                                 <h3>Decisiones mejor acompañadas</h3>
                                 <p>Conecta hallazgos con especialistas para reducir incertidumbre y acelerar el cuidado.</p>
                             </div>
                         </article>
-                    </div>
-                </div>
-                <div class="vision-media-grid" aria-hidden="true">
-                    <div class="vision-media-card vision-media-tall">
-                        <div class="vision-orb vision-orb-a"></div>
-                        <div class="vision-orb vision-orb-b"></div>
-                        <div class="vision-lines"></div>
-                    </div>
-                    <div class="vision-media-card vision-media-top">
-                        <div class="vision-grid-glow"></div>
-                        <span class="vision-chip">Lectura clínica</span>
-                    </div>
-                    <div class="vision-media-card vision-media-gradient"></div>
-                    <div class="vision-media-card vision-media-bottom">
-                        <div class="vision-wave"></div>
-                        <span class="vision-chip">Contexto del paciente</span>
                     </div>
                 </div>
             </div>
@@ -105,32 +94,26 @@
                 </div>
                 <div class="capability-grid">
                     <article class="capability-card">
-                        <div class="capability-icon">◌</div>
                         <h3>Evaluación de síntomas</h3>
                         <p>Describe lo que sientes y organiza la información clínica para orientarte mejor.</p>
                     </article>
                     <article class="capability-card">
-                        <div class="capability-icon">⌁</div>
                         <h3>Interpretación de imágenes</h3>
                         <p>Sube radiografías o imágenes médicas para obtener una lectura orientativa.</p>
                     </article>
                     <article class="capability-card">
-                        <div class="capability-icon">+</div>
                         <h3>Análisis de exámenes</h3>
                         <p>Integra resultados de laboratorio y detecta rangos o patrones relevantes.</p>
                     </article>
                     <article class="capability-card">
-                        <div class="capability-icon">✓</div>
                         <h3>Prioridad clínica</h3>
                         <p>Estimación del nivel de urgencia y sugerencia del siguiente paso.</p>
                     </article>
                     <article class="capability-card">
-                        <div class="capability-icon">▣</div>
                         <h3>Historial organizado</h3>
                         <p>Toda tu información clínica queda estructurada y accesible.</p>
                     </article>
                     <article class="capability-card">
-                        <div class="capability-icon">◎</div>
                         <h3>Red de especialistas</h3>
                         <p>Conecta con profesionales adecuados según tu caso.</p>
                     </article>
@@ -148,28 +131,24 @@
                     </div>
                     <div class="process-timeline" aria-label="Flujo paso a paso">
                         <article class="process-step">
-                            <span class="process-icon" aria-hidden="true">✋</span>
                             <div>
                                 <h3>Cuéntanos qué está pasando</h3>
                                 <p>Describe síntomas, antecedentes y contexto en menos de dos minutos.</p>
                             </div>
                         </article>
                         <article class="process-step">
-                            <span class="process-icon" aria-hidden="true">🩺</span>
                             <div>
                                 <h3>Selecciona especialista o enfoque</h3>
                                 <p>Organizamos tu caso según área clínica para darte una orientación más útil.</p>
                             </div>
                         </article>
                         <article class="process-step">
-                            <span class="process-icon" aria-hidden="true">🕒</span>
                             <div>
                                 <h3>Recibe prioridad y siguiente paso</h3>
                                 <p>Obtén una ruta orientativa: autocuidado, consulta prioritaria o derivación.</p>
                             </div>
                         </article>
                         <article class="process-step">
-                            <span class="process-icon" aria-hidden="true">✓</span>
                             <div>
                                 <h3>Da seguimiento a tu evolución</h3>
                                 <p>Consulta recomendaciones y mantén continuidad de tu proceso de salud.</p>
@@ -410,9 +389,95 @@
 
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+        const heroFrameElement = document.querySelector('#hero-scroll-frame');
+        const heroSection = document.querySelector('.hero');
+        const heroFrameTotal = 97;
+        let heroCurrentFrame = 1;
+        let frameTicking = false;
+
+        const framePath = (index) => `./assets/hero-frames/frame_${String(index).padStart(4, '0')}.jpg`;
+
+        const updateHeroFrame = (nextFrame) => {
+            const safeFrame = Math.max(1, Math.min(heroFrameTotal, nextFrame));
+            if (!heroFrameElement || safeFrame === heroCurrentFrame) return;
+            heroCurrentFrame = safeFrame;
+            heroFrameElement.src = framePath(safeFrame);
+        };
+
+        const updateHeroFrameByScroll = () => {
+            if (!heroSection) return;
+            const rect = heroSection.getBoundingClientRect();
+            const scrollRange = Math.max(rect.height - window.innerHeight, 1);
+            const traveled = Math.max(0, Math.min(scrollRange, -rect.top));
+            const clampedProgress = traveled / scrollRange;
+            const nextFrame = Math.round(clampedProgress * (heroFrameTotal - 1)) + 1;
+            updateHeroFrame(nextFrame);
+            frameTicking = false;
+        };
+
+        const requestHeroFrameUpdate = () => {
+            if (frameTicking) return;
+            frameTicking = true;
+            window.requestAnimationFrame(updateHeroFrameByScroll);
+        };
+
+        if (heroFrameElement) {
+            // Load a subset early so scroll interaction starts instantly.
+            const warmFrames = [1, 6, 12, 18, 24, 36, 48, 60, 72, 84, 97];
+            warmFrames.forEach((index) => {
+                const img = new Image();
+                img.src = framePath(index);
+            });
+        }
+
+        if (!prefersReducedMotion && heroFrameElement && heroSection) {
+            window.addEventListener('scroll', requestHeroFrameUpdate, { passive: true });
+            window.addEventListener('resize', requestHeroFrameUpdate);
+            requestHeroFrameUpdate();
+        }
+
+        const visionSection = document.querySelector('.vision-section');
+        const dnaVideo = document.querySelector('.vision-dna-video');
+        const visionScrubSpeed = 2.2;
+        let visionTicking = false;
+
+        const syncVisionVideoToScroll = () => {
+            if (!visionSection || !dnaVideo || !Number.isFinite(dnaVideo.duration) || dnaVideo.duration <= 0) {
+                visionTicking = false;
+                return;
+            }
+
+            const rect = visionSection.getBoundingClientRect();
+            const viewport = window.innerHeight || 1;
+            const travel = rect.height + viewport;
+            const progress = (viewport - rect.top) / travel;
+            const loopedProgress = ((progress * visionScrubSpeed) % 1 + 1) % 1;
+            const targetTime = loopedProgress * dnaVideo.duration;
+
+            if (Math.abs(dnaVideo.currentTime - targetTime) > 0.03) {
+                dnaVideo.currentTime = targetTime;
+            }
+
+            visionTicking = false;
+        };
+
+        const requestVisionVideoSync = () => {
+            if (visionTicking) return;
+            visionTicking = true;
+            window.requestAnimationFrame(syncVisionVideoToScroll);
+        };
+
+        if (!prefersReducedMotion && visionSection && dnaVideo) {
+            dnaVideo.pause();
+            dnaVideo.currentTime = 0;
+            dnaVideo.addEventListener('loadedmetadata', requestVisionVideoSync, { once: true });
+            window.addEventListener('scroll', requestVisionVideoSync, { passive: true });
+            window.addEventListener('resize', requestVisionVideoSync);
+        }
+
         if (!prefersReducedMotion) {
             const revealTargets = document.querySelectorAll(
-                '.hero-copy > *, .vision-copy > *, .vision-point, .vision-media-card, .section-head > *, .process-intro > *, .process-step, .capability-card, .doctor-card, .wellness-post-card, .faq-item, .cta-panel'
+                '.hero-copy > *, .vision-copy > *, .vision-point, .vision-media-card, .vision-media-video-wrap, .section-head > *, .process-intro > *, .process-step, .capability-card, .doctor-card, .wellness-post-card, .faq-item, .cta-panel'
             );
 
             revealTargets.forEach((el) => {
@@ -701,7 +766,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
-
 
 
 
